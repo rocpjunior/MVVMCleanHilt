@@ -1,5 +1,5 @@
 package com.rocpjunior.mvvmcleanhilt.utilities
 
 object Constantes {
-    const val BASE_URL = "https://dummyjson.com/"
+    const val URL_BASE = "https://dummyjson.com/"
 }

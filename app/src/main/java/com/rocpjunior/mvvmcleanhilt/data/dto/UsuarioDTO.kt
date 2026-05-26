@@ -1,5 +1,7 @@
 package com.rocpjunior.mvvmcleanhilt.data.dto
 
+import com.rocpjunior.mvvmcleanhilt.domain.model.Usuario
+
 data class UsuarioDTO(
     val address: Address,
     val age: Int,
@@ -30,3 +32,15 @@ data class UsuarioDTO(
     val username: String,
     val weight: Double
 )
+
+fun UsuarioDTO.toUsuario(): Usuario {
+    return Usuario(
+        nome = this.firstName,
+        sobrenome = this.lastName,
+        endereco = this.address.toString(),
+        idade = this.age,
+        email = this.email,
+        telefone = this.phone,
+        imagem = this.image
+    )
+}
