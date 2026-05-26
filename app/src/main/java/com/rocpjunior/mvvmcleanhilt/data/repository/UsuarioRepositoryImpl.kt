@@ -15,7 +15,7 @@ class UsuarioRepositoryImpl @Inject constructor(
             val resposta = dummyApi.usuarios()
             if( resposta.isSuccessful && resposta.body() != null){
                 val resultadoAPIDTO = resposta.body()
-                val listaUsuarios = resultadoAPIDTO?.usuarioDTOS
+                val listaUsuarios = resultadoAPIDTO?.users
                 if( listaUsuarios != null ){
                     return listaUsuarios.map { it.toUsuario() }
                 }
